@@ -2,24 +2,21 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main - this function use to  prints all possible combinations of single-digit numbers.
+ * main - this function use to  prints 
+ * all possible different combinations of two digits.
  *
  * Return:0.
  **/
-int main(void)
-{
-        int alphabet , num;
-        
-        for (alphabet = '0'; alphabet <= '9'; alphabet++){
-                for (num = '0'; num<='9';num++){
-                    if (num != '8' && alphabet != '9'){
-                        putchar(alphabet);
-                        putchar(num);
-                        putchar(',');
-                        putchar(' ');
-                }
-            }
-        }
-        putchar('\n');
-	return (0);
+int main(void) {
+	for (int i = 0; i <= 9; i++) {
+		for (int j = i + 1; j <= 9; j++) {
+			if (i != j) {
+				putchar('0' + i);
+				putchar('0' + j);
+				putchar(',');
+				putchar(' ');
+			}
+		}
+	}
+    return (0);
 }
