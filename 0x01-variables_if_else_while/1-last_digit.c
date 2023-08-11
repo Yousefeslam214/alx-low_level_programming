@@ -5,7 +5,7 @@
  * main - this function use to bring the last digit of random number
  * and check if it greater than 5 or is 0 or is less than 6 and not 0.
  *
- * return:0.
+ * Return:0.
  **/
 int main(void)
 {
