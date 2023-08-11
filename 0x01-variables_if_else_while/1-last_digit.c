@@ -5,7 +5,7 @@
  * main - this function use to bring the last digit of random number 
  * and check if it greater than 5 or is 0 or is less than 6 and not 0.
  * 
- * return - o.
+ * return:0.
  **/
 int main(void)
 {
@@ -13,7 +13,6 @@ int main(void)
         
         srand(time(0));
         n = rand() - RAND_MAX / 2;
-        int last_digit = n % 10;
         int abs_last_digit = abs(last_digit);
         if (n % 10 == 0)
             printf("Last digit of %d is %d and is 0\n",n,n % 10);
