@@ -4,7 +4,9 @@
 
 /**
  * main - function check random number if it positive or
- * negaitive or zero
+ * negaitive or zero.
+ *
+ * Return:0.
  */
 int main(void)
 {
