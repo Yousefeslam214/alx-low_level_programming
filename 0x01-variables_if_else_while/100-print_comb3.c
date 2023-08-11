@@ -1,22 +1,36 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 /**
- * main - this function use to  prints 
- * all possible different combinations of two digits.
- *
- * Return:0.
- **/
-int main(void) {
-	for (int i = 0; i <= 9; i++) {
-		for (int j = i + 1; j <= 9; j++) {
-			if (i != j) {
-				putchar('0' + i);
-				putchar('0' + j);
+ * main - print numbers from 00 to 99.
+(*
+ * Return: 0 on success
+ */
+int main(void)
+{
+	int i = '0';
+	int j = '0';
+
+	while (i <= '9')
+	{
+		while (j <= '9')
+		{
+			putchar(i);
+			putchar(j);
+			if (j == '9' && i == '9')
+			{
+				putchar('\n');
+			}
+			else
+			{
 				putchar(',');
 				putchar(' ');
 			}
+			j++;
 		}
+		if (j >= '9')
+		{
+			j = '0';
+		}
+		i++;
 	}
-    return (0);
+	return (0);
 }
