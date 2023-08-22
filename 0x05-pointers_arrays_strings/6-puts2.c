@@ -1,24 +1,25 @@
-#include <stdio.h>
 #include "main.h"
+
 /**
- * rev_string - function that prints every other character of a string, starting with the first character,
- * followed by a new line.
- *
- * @s: char
+ * puts2 - prints one char out of 2 of a string
+ * followed by a new line
+ * @str: string to print the chars from
  */
-
-void rev_string(char *s)
+void puts2(char *str)
 {
-        int i, j, len;
+	int len, i;
 
-        while (s[i] != '\0')
-        {
-                i++;
-        }
-        len = i;
-        for (j = 0; j < len; j +=2)
-        {
-                _putchar(s[j]);
-        }
-        _putchar('\n');
+	len = 0;
+
+	while (str[len] != '\0')
+	{
+		len++;
+	}
+
+	for (i = 0; i < len; i += 2)
+	{
+		_putchar(str[i]);
+	}
+
+	_putchar('\n');
 }
