@@ -4,9 +4,9 @@
  *
  * @s1: char.
  * @s2: char.
- * 
+ *
  * //h < *s1 && h < *s2 && s1[h] != '\0' && s2[h] != '\0'//
- * 
+ *
  * Return: compares two strings.
 */
 int _strcmp(char *s1, char *s2)
