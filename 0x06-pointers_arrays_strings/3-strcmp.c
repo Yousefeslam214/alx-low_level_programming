@@ -21,13 +21,13 @@ int _strcmp(char *s1, char *s2)
 		if (s1[i] == s2[i])
 			continue;
 		else
-			s1[i] = '\0';
+			break;
 	}
 	for (h = 0; s1[h] != '\0' || s2[h] != '\0'; i++)
-			{
-				totals2 = s2[i];
-				totals1 = s1[i];
-				return (totals1 - totals2);
-			}
+		{
+			totals2 = s2[i];
+			totals1 = s1[i];
+			return (totals1 - totals2);
+		}
 	return (0);
 }
