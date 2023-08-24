@@ -11,11 +11,10 @@ char *string_toupper(char *in)
 	int i = 0;
 	int asci = 'a' - 'A';
 
-	while (in[i] !='\0')
+	while (in[i] != '\0')
 	{
 		if (in[i] >= 'a' && in[i] <= 'z')
 		{
-		
 		in[i] = in[i] - asci;
 		}
 		i++;
