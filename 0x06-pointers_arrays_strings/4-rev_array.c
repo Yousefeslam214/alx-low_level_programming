@@ -5,11 +5,11 @@
  *
  * @a: array of int.
  * @n: number of elmente in array.
- *
 */
 void reverse_array(int *a, int n)
 {
-	int temp, began, last;
+	char temp;
+	int began, last;
 
 	for (began = 0, last = n - 1; began < n / 2; began++, last--)
 	{
