@@ -1,50 +1,38 @@
 #include "main.h"
 /**
- * string_toupper - function that changes all
- * lowercase letters
- * of a string to uppercase.
+ * leet - function that encodes a
+ * string into 1337.
  *
  * @in: array of char.
- * Return: string of uppercase.
+ * Return: string.
 */
-char *string_toupper(char *in)
+char *leet(char *in)
 {
 	int i = 0;
-	int asci = 'a' - 'A';
 
 	while (in[i] != '\0')
 	{
-		if (in[i] >= 'a' || in[i] <= 'A')
+		if (in[i] == 'a' || in[i] == 'A')
 		{
-		in[i] = '4';
+			in[i] = '4';
 		}
-        else if (in[i] >= 'e' || in[i] <= 'E')
+		else if (in[i] == 'e' || in[i] == 'E')
 		{
-		in[i] = '3';
+			in[i] = '3';
 		}
-        else if (in[i] >= 'o' || in[i] <= 'O')
+		else if (in[i] == 'o' || in[i] == 'O')
 		{
-		in[i] = '0';
+			in[i] = '0';
 		}
-        else if (in[i] >= 't' || in[i] <= 'T')
+		else if (in[i] == 't' || in[i] == 'T')
 		{
-		in[i] = '7';
+			in[i] = '7';
 		}
-        else if (in[i] >= 'l' || in[i] <= 'L')
+		else if (in[i] == 'l' || in[i] == 'L')
 		{
-		in[i] = '1';
+			in[i] = '1';
 		}
-		i++;
+		++i;
 	}
 	return (in);
-}
-int main(void)
-{
-    char s[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\n";
-    char *p;
-
-    p = leet(s);
-    printf("%s", p);
-    printf("%s", s);
-    return (0);
 }
