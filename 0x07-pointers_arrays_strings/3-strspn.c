@@ -12,22 +12,17 @@
 */
 unsigned int _strspn(char *s, char *accept)
 {
-	int i, max = 0, j;
+	unsigned int i, j;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (j = 0; *(s + j); j++)
 	{
-		if (s[i] != 32)
+		for (i = 0; *(accept + i); i++)
 		{
-			for (j = 0; accept[j] != '\0'; j++)
-			{
-				if (s[i] == accept[j])
-					max++;
-			}
+			if (*(s + j) == *(accept + i))
+				break;
 		}
-		else
-		{
-			return (max);
-		}
+	if (*(accept + i) == '\0')
+		break;
 	}
-	return (max);
+	return (j);
 }
