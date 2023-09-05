@@ -2,10 +2,13 @@
 #include <stdlib.h>
 
 /**
- * main - program that prints its name, followed by a new line.
- * @argc: count of arguments
- * @argv: parameter value
- * Return: Always 0.
+ * create_array - function that
+ * creates an array of chars, and
+ * initializes it with a specific char.
+ * 
+ * @size: size
+ * @c: char
+ * Return: char.
  */
 
 char *create_array(unsigned int size, char c)
