@@ -4,7 +4,7 @@
 #include <ctype.h>
 
 /**
- * main - program that prints the minimum 
+ * main - program that prints the minimum
  * number of coins to make change for
  * an amount of money.
  *
@@ -28,9 +28,7 @@ int main(int argc, char *argv[])
 				leastcents += money / cents[i];
 				money = money % cents[i];
 				if (money % cents[i] == 0)
-					{
-						break;
-					}
+					break;
 			}
 		}
 		printf("%d\n", leastcents);
