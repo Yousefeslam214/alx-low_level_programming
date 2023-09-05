@@ -1,9 +1,12 @@
 #include "stdio.h"
 
 /**
- * main - program that prints its name, followed by a new line.
- * @argc: count of arguments
- * @argv: parameter value
+ * main - program that
+ * prints all arguments it receives.
+ *
+ * @argc: count of arguments.
+ * @argv: parameter value.
+ *
  * Return: Always 0.
  */
 
