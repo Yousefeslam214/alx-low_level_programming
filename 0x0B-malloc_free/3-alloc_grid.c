@@ -3,10 +3,12 @@
 #include <string.h>
 
 /**
- * str_concat - conctinate two strings
- * @s1:first string
- * @s2:secound string
- * Return:ptr (s1 + s2)
+ * alloc_grid - function that returns a pointer to a 2
+ * dimensional array of integers.
+ * @width: width of an array
+ * @height: height of an array
+ * Return: If width or height is 0 or
+ * negative, return NULL
  */
 
 int **alloc_grid(int width, int height)
