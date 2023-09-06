@@ -15,10 +15,10 @@ char *str_concat(char *s1, char *s2)
 	char *n;
 
 	len = (int)(strlen(s1) + strlen(s2));
-	if (s1 == NULL && s2 == NULL)
-		return (NULL);
-	/*if (s1 == 0 || s2 == 0)
-		return (NULL);*/
+	if (s1 == NULL)
+		s1 = "\0";
+	if (s2 == NULL)
+		s2 = "\0";
 	n = malloc(sizeof(char) * (len + 1));
 	if (n == 0)
 		return (NULL);
