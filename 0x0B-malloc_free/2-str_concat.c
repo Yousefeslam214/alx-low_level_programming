@@ -20,9 +20,7 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL)
 		s2 = "\0";
 	n = malloc(sizeof(char) * (len + 1));
-	if (n == 0)
-		return (NULL);
-	else
+	if (n != 0)
 	{
 		for (i = 0; i < (int)(strlen(s1)); i++)
 			n[i] = s1[i];
@@ -32,6 +30,8 @@ char *str_concat(char *s1, char *s2)
 			j++;
 		}
 	}
+	else
+		return (NULL);
 	n[i] = '\0';
 	return (n);
 }
