@@ -8,6 +8,7 @@
  *
  * @nmemb: int.
  * @size: int.
+ * Return:a pointer to the allocated memory.
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
