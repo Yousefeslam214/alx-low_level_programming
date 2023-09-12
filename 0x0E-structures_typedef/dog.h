@@ -13,7 +13,7 @@
  * a big kitty world.
 */
 
-typedef struct dog
+struct dog
 {
 	char *name;
 	float age;
