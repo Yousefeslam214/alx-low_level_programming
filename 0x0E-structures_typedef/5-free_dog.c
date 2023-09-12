@@ -4,11 +4,8 @@
 #include "dog.h"
 
 /**
- * *new_dog -  function that creates a new dog.
- * @name: dog name
- * @age: dogage
- * @owner: dog owner
- * Return: pointer to the new dog if no error otherwise NULL
+ * free_dog - frees dogs.
+ * @d: the dog
  */
 
 void free_dog(dog_t *d)
