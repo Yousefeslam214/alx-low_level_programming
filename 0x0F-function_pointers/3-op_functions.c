@@ -1,25 +1,57 @@
-#include "3-calc.h"
-#include <stddef.h>
 #include <stdlib.h>
+#include "3-calc.h"
 
 /**
- * get_op_func - take op from user
- * @s:operator
- * Return:pointer of function
+ * op_add - summition
+ * @a:first integer
+ * @b:secound integer
+ * Return: sum of of two
  */
-int (*get_op_func(char *s))(int, int)
+int op_add(int a, int b)
 {
-	op_t ops[] = {
-		{"+", op_add},
-		{"-", op_sub},
-		{"*", op_mul},
-		{"/", op_div},
-		{"%", op_mod},
-		{NULL, NULL}
-	};
-	int i = 0;
+	return (a + b);
+}
 
-	while (ops[i].op != NULL && *(ops[i].op) != *s)
-		i++;
-	return (ops[i].f);
+/**
+ * op_sub - sub
+ * @a:first integer
+ * @b:secound integer
+ * Return: sub of of two
+ */
+int op_sub(int a, int b)
+{
+	return (a - b);
+}
+
+/**
+* op_mul - multi
+* @a:first integer
+* @b:secound integer
+* Return: mul of of two
+*/
+int op_mul(int a, int b)
+{
+	return (a * b);
+}
+
+/**
+* op_div - div
+* @a:first integer
+* @b:secound integer
+* Return: div of of two
+*/
+int op_div(int a, int b)
+{
+	return (a / b);
+}
+
+/**
+* op_mod - mod
+* @a:first integer
+* @b:secound integer
+* Return: mod of of two
+*/
+int op_mod(int a, int b)
+{
+	return (a % b);
 }
