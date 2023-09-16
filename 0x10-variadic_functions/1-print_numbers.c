@@ -3,15 +3,15 @@
 #include "variadic_functions.h"
 
 /**
- * sum_them_all - Entry Point
- * @n: variadic inputs
- * Return: sum
+ * print_numbers - prints numbers, followed by a new line.
+ * @separator: string to be printed between numbers
+ * @n : number of intgers passed to function
  */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list args;
-    int i;
+	int i;
 
 	if (separator == NULL)
 		separator = "";
@@ -20,13 +20,13 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	
 	for (i = 0; i < (int)n; i++)
-    {
-        printf("%d",va_arg(args, int));
-        if (i == (int)(n -1))
-            break;
-        printf("%s",separator);
-    }
+	{
+		printf("%d",va_arg(args, int));
+		if (i == (int)(n -1))
+			break;
+		printf("%s",separator);
+	}
 
-    printf("\n");
+	printf("\n");
 	va_end(args);
 }
