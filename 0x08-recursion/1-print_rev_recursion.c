@@ -9,16 +9,12 @@
  * Return: new string.
  */
 
-void _puts_recursion(char *s)
+void _print_rev_recursion(char *s)
 {
-	if(*s != '\0')
-	{
-		_putchar(*s);
-		_puts_recursion(s++);
-	}
-	else
-	{
+	if (*s == '\0') {
 		_putchar('\0');
-		return;
-	}
+        return;
+    }
+	_print_rev_recursion(++s);
+	_putchar(*s);
 }
