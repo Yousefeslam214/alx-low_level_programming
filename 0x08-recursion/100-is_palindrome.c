@@ -24,7 +24,8 @@ bool palindrome(char *string, int left, int right)
 }
 
 /**
- * is_palindrome - function that returns 1 if a string is a palindrome and 0 if not.
+ * is_palindrome - function that returns 1 if a
+ * string is a palindrome and 0 if not.
  * @s: string
  *
  * Return: int.
