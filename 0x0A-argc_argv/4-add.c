@@ -8,7 +8,7 @@ int main (int argc __attribute__((unused)), char *argv[] )
 	if (argc == 1)
 	{
 		printf("0\n");
-		return (1);
+		return (0);
 	}
 	for(i = 1; i < argc; i++)
 	{
