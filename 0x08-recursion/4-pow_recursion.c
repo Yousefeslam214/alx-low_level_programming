@@ -1,12 +1,11 @@
 #include "main.h"
 
 /**
- * _memset - function that fills memory with a constant byte.
- * @s: string
- * @b: string
- * @n: bytes of the memory area pointed
- *
- * Return: new string.
+ * _pow_recursion - function that returns the value of
+ * x raised to the power of y.
+ * @x: int
+ * @y: int
+ * Return: int.
  */
 
 int _pow_recursion(int x, int y)
