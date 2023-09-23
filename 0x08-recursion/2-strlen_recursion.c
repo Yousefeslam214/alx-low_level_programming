@@ -1,12 +1,9 @@
 #include "main.h"
 
 /**
- * _memset - function that fills memory with a constant byte.
+ * _strlen_recursion - function that returns the length of a string.
  * @s: string
- * @b: string
- * @n: bytes of the memory area pointed
- *
- * Return: new string.
+ * Return: int.
  */
 
 int _strlen_recursion(char *s)
