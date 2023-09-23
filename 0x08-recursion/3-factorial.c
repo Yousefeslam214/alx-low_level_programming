@@ -1,12 +1,9 @@
 #include "main.h"
 
 /**
- * factorial - function that fills memory with a constant byte.
- * @s: string
- * @b: string
- * @n: bytes of the memory area pointed
- *
- * Return: new string.
+ * factorial - function that returns the factorial of a given number.
+ * @n: int
+ * Return: int.
  */
 
 int factorial(int n)
