@@ -1,4 +1,13 @@
 #include "main.h"
+
+/**
+ * get_sqrt - function that help to returns the natural
+ * square root of a number.
+ * @a: int
+ * @b: int
+ * Return: int
+ */
+
 int get_sqrt(int a, int b)
 {
 	if (b * b == a)
