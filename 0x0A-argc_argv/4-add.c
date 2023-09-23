@@ -12,7 +12,7 @@ int main (int argc __attribute__((unused)), char *argv[] )
 	}
 	for(i = 1; i < argc; i++)
 	{
-		if (argv[i][0] >='0' && argv[i][0] <= '9')
+		if (argv[i][0] >= '0' && argv[i][0] <= '9')
 			sum += atoi(argv[i]);
 		else
 		{
@@ -20,7 +20,6 @@ int main (int argc __attribute__((unused)), char *argv[] )
 			return (1);
 		}
 	}
-		printf("%d\n", sum);
-
+	printf("%d\n", sum);
 	return (0);
 }
