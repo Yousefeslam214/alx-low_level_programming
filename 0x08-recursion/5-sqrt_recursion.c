@@ -1,23 +1,22 @@
 #include "main.h"
 int get_sqrt(int a, int b)
 {
-	 if (b * b == a)
+	if (b * b == a)
 		return (b);
-	else if ( b * b > a)
+	else if (b * b > a)
 		return (-1);
 	else
 		return (get_sqrt(a, b + 1));
 }
 /**
- * _memset - function that fills memory with a constant byte.
- * @s: string
- * @b: string
- * @n: bytes of the memory area pointed
+ * _sqrt_recursion - function that returns the natural
+ * square root of a number.
+ * @n: int
  *
- * Return: new string.
+ * Return: int
  */
 
 int _sqrt_recursion(int n)
 {
-	return(get_sqrt(n, 1));
+	return (get_sqrt(n, 1));
 }
