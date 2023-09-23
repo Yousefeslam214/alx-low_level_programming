@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include <string.h>
 
-/*
+
 bool palindrome (char *s1, char *s2,int start, int len)
 {
 	if (start >= len)
@@ -13,7 +13,7 @@ bool palindrome (char *s1, char *s2,int start, int len)
 	else
 		return false;
 }
-*/
+
 /**
  * _memset - function that fills memory with a constant byte.
  * @s: string
@@ -22,7 +22,7 @@ bool palindrome (char *s1, char *s2,int start, int len)
  *
  * Return: new string.
  */
-/*
+
 int wildcmp(char *s1, char *s2)
 {
 	if (*s1 == '\0' && *s2 == '\0')
@@ -31,8 +31,8 @@ int wildcmp(char *s1, char *s2)
     	return wildcmp(s1 + 1, s2 + 1);
 	else 
 		return false;
-}*/
-/*
+}
+
 int wildcmp(char *s1, char *s2)
 {
     if (*s1 == '\0' && *s2 == '\0')
@@ -54,5 +54,5 @@ int wildcmp(char *s1, char *s2)
 
     return false;
 }
-*/
+
 
