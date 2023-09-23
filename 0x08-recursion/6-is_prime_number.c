@@ -21,7 +21,7 @@ int get_prime_num(int a, int b)
 		return (0);
 	else if (b * b > a)
 		return (1);
-	else 
+	else
 		return (get_prime_num(a, b + 1));
 }
 
