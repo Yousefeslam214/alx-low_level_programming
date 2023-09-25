@@ -3,19 +3,16 @@
 #include <string.h>
 
 /**
- * create_array - function that creates an array of chars,
- * and initializes it with a specific char.
- * memory using malloc.
+ * _strdup - function that returns a pointer to a newly allocated space in
+ * memory, which contains a copy of the string given as a parameter.
  *
- * @size: int.
  * @c: char.
  * Return: char.
  */
 
 char *_strdup(char *str)
 {
-	int i;
-	int len;
+	int i, len;
 	char *A;
 
 	len = strlen(str);
