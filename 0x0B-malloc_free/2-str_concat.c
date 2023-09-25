@@ -3,10 +3,9 @@
 #include <string.h>
 
 /**
- * _strdup - function that returns a pointer to a newly allocated space in
- * memory, which contains a copy of the string given as a parameter.
- *
- * @str: char.
+ * str_concat - function that concatenates two strings.
+ * @s1: char.
+ * @s2: char.
  * Return: char.
  */
 
@@ -26,10 +25,10 @@ char *str_concat(char *s1, char *s2)
 	for (i = 0; i < len1; i++)
 		A[i] = s1[i];
 	for (i = len1; i < len; i++)
-		{
-			A[i] = s2[j];
-			j++;
-		}
+	{
+		A[i] = s2[j];
+		j++;
+	}
 	A[i] = '\0';
 	return (A);
 }
