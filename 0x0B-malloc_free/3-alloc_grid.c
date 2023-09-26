@@ -3,10 +3,11 @@
 #include <string.h>
 
 /**
- * str_concat - function that concatenates two strings.
- * @s1: char.
- * @s2: char.
- * Return: char.
+ * alloc_grid - function that returns a pointer to a
+ * 2 dimensional array of integers.
+ * @width: int.
+ * @height: int.
+ * Return: int.
  */
 
 int **alloc_grid(int width, int height)
@@ -16,19 +17,19 @@ int **alloc_grid(int width, int height)
 
 	if (!width || !height)
 		return (NULL);
-	ptr = (int **)malloc((height)* sizeof(int *));
+	ptr = (int **)malloc((height) * sizeof(int *));
 	if (ptr == 0)
 		return (NULL);
 	for (i = 0; i < height; i++)
+	{
+		ptr[i] = (int *)malloc(width * sizeof(int));
+		if (ptr[i] == 0)
 		{
-			ptr[i] =(int *)malloc(width* sizeof(int));
-			if (ptr[i] == 0)
-			{
-				for (b = 0; b < i; b++)
-					free(ptr[b]);
-				free(ptr);
-				return (NULL);
-			}
+			for (b = 0; b < i; b++)
+				free(ptr[b]);
+			free(ptr);
+			return (NULL);
 		}
+	}
 	return (ptr);
 }
