@@ -14,7 +14,7 @@ int **alloc_grid(int width, int height)
 	int i, b;
 	int **ptr;
 
-	if (width <= 0 || height <= 0)
+	if (!width || !height)
 		return (NULL);
 	ptr = (int **)calloc((height), sizeof(int *));
 	if (ptr == NULL)
@@ -30,5 +30,12 @@ int **alloc_grid(int width, int height)
 				return (NULL);
 			}
 		}
+	for (i = 0; i < height; i++)
+	{
+		for (int j = 0; j < width; j++)
+		{
+			ptr[i][j] = 0;
+		}
+	}
 	return (ptr);
 }
