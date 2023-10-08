@@ -3,18 +3,17 @@
 #include <string.h>
 
 /**
- * malloc_checked - function that allocates
- * memory using malloc.
+ * string_nconcat - function that concatenates two strings.
  *
- * @b: int.
- * Return: int.
- * 	//unsigned int len2 = sizeof(*s2)/sizeof(char);
+ * @s1: array of char.
+ * @s2: array of char.
+ * @n: int.
+ * Return: char.
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int len1 ,len2;
-	unsigned int h = 0, i, j;
+	unsigned int len1 ,len2,h = 0, i, j;
 	char *ptr ;
 	
 	
