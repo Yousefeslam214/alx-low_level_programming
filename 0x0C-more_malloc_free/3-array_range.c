@@ -3,10 +3,10 @@
 #include <string.h>
 
 /**
- * _calloc - function that allocates memory for an array, using malloc.
+ * array_range - function that creates an array of integers.
  *
- * @nmemb: int.
- * @size: int.
+ * @min: int.
+ * @max: int.
  * Return: ptr.
  */
 
@@ -20,7 +20,7 @@ int *array_range(int min, int max)
 	ptr = (int *)malloc(sizeof(int) * (max - min) + sizeof(int));
 	if (ptr == 0)
 		return (NULL);
-	while(min <= max)
+	while (min <= max)
 	{
 		ptr[i] = min;
 		min++;
