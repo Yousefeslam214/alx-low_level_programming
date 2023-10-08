@@ -1,47 +1,35 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 
 /**
- * string_nconcat -  function that
- * concatenates two strings.
+ * malloc_checked - function that allocates
+ * memory using malloc.
  *
- * @s1:char.
- * @s2:char.
- * @n: int.
- *
+ * @b: int.
  * Return: int.
+ * 	//unsigned int len2 = sizeof(*s2)/sizeof(char);
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *str;
-	unsigned int i, j, s1_length, s2_length;
+	unsigned int len1 = strlen(s1);
+	unsigned int h = 0;
+	unsigned int i = 0,j;
+	char *ptr = malloc(len1 + n);
 
-	/*Check if the strings passed are null*/
 	if (s1 == NULL)
 		s1 = "";
-	if (s2 == NULL)
+	else if (s2 == NULL)
 		s2 = "";
-	/*Compute the length of the strings*/
-	for (s1_length = 0; s1[s1_length] != '\0'; s1_length++)
-		;
-	for (s2_length = 0; s2[s2_length] != '\0'; s2_length++)
-		;
-	/*Memory reservation for case 1 & 2.*/
-	str = malloc(s1_length + n + 1);
-	if (str == NULL)
+	for(i = 0; i < (len1);i++)
 	{
-		return (NULL);
+		ptr[i] = s1[i];
 	}
-	/*Copy first string into str.*/
-	for (i = 0; s1[i] != '\0'; i++)
-		str[i] = s1[i];
-	/*Copy second string into str.*/
-	for (j = 0; j < n; j++)
+	for (j = len1; j < (n + len1);j++)
 	{
-		str[i] = s2[j];
-		i++;
+		ptr[j] = s2[h];
+		h++;
 	}
-	str[i] = '\0';
-	return (str);
+	return ptr;
 }
