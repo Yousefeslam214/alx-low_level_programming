@@ -3,12 +3,11 @@
 #include <string.h>
 
 /**
- * string_nconcat - function that concatenates two strings.
+ * calloc - function that allocates memory for an array, using malloc.
  *
- * @s1: array of char.
- * @s2: array of char.
- * @n: int.
- * Return: char.
+ * @nmeb: int.
+ * @size: int.
+ * Return: ptr.
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
