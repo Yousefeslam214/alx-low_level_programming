@@ -13,11 +13,11 @@
 int *array_range(int min, int max)
 {
 	unsigned int i;
-	char *ptr;
+	int *ptr;
 
 	if (min > max)
 		return (NULL);
-	ptr = (char *)malloc(nmemb * size);
+	ptr = (int *)malloc(sizeof(int) * (max - min));
 	if (ptr == 0)
 		return (NULL);
 	for (i = 0; i < size * nmemb; i++)
