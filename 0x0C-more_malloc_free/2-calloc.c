@@ -11,7 +11,7 @@
  * Return: char.
  */
 
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int len1, len2, h = 0, i, j;
 	char *ptr;
@@ -22,7 +22,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		len2 = strlen(s2);
 	if (n >= strlen(s2))
 		n = len2;
-	ptr = (char *)malloc(len1 + n + 1);
+	ptr = malloc(len1 + n + 1);
 	if (ptr == 0)
 		return (NULL);
 	for (i = 0; i < (len1); i++)
