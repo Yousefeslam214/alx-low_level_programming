@@ -18,6 +18,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i = 0,j;
 	char *ptr = malloc(len1 + n);
 
+	if (ptr == NULL)
+		return NULL;
+
 	if (s1 == NULL)
 		s1 = "";
 	else if (s2 == NULL)
