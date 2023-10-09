@@ -23,8 +23,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n >= strlen(s2))
 		n = len2;
 	ptr = (char *)malloc(len1 + n + 1);
-	if (ptr == 0)
+	if (ptr == NULL)
 	{
+		printf("Error: malloc() failed.\n");
 		free(ptr);
 		return (NULL);
 	}
