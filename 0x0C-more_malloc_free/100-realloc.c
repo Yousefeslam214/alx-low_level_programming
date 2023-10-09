@@ -3,12 +3,12 @@
 #include <string.h>
 
 /**
- * string_nconcat - function that concatenates two strings.
+ * _realloc -  function that reallocates a memory block using malloc and free.
  *
- * @s1: array of char.
- * @s2: array of char.
- * @n: int.
- * Return: char.
+ * @ptr: array of char.
+ * @old_size: int.
+ * @new_size: int.
+ * Return: nothing.
  */
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
