@@ -1,7 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main (int argc __attribute__((unused)), char *argv[] )
+/**
+ * main - Prints all arguments passed into main
+ * @argc: Number of command line arguments
+ * @argv: Array name
+ * Return: 0
+ */
+
+int main(int argc __attribute__((unused)), char *argv[])
 {
 	if (argc != 3)
 	{
