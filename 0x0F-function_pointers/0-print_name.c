@@ -1,6 +1,6 @@
-#include "function_pointers.h"
 #include <stdlib.h>
 #include <string.h>
+#include "function_pointers.h"
 
 /**
  * array_range - function that creates an array of integers.
@@ -12,5 +12,8 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	f(name);
+	if (f != NULL)
+	{
+		f(name);
+	}
 }
