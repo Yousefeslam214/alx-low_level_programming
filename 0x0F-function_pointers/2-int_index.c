@@ -6,8 +6,8 @@
  * int_index -   function that searches for an integer.
  * @array: array of int.
  * @size: size of array.
- * @action: fun.
- * Return: noting.
+ * @cmp: fun.
+ * Return: first ele match.
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
