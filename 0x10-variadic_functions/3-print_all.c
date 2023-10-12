@@ -11,7 +11,7 @@
 
 void print_all(const char * const format, ...)
 {
-	unsigned int i = 0,n = 0;
+	unsigned int i = 0, n = 0;
 	char *sep, *str;
 	va_list args;
 
