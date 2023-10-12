@@ -18,10 +18,8 @@ void print_all(const char * const format, ...)
 	va_start(args, format);
 	sep = ", ";
 	while (format && format[i])
-	{
 		i++;
-	}
-	while (format && format[i])
+	while (format && format[n])
 	{
 		if (n == (i - 1))
 			sep = "";
