@@ -12,25 +12,29 @@
 
 int main(int argc, char *argv[])
 {
-	int finalRes;
+	int n1, n2;
+	char *op;
 
-	finalRes = get_op_func(argv[2]) (atoi(argv[1]), atoi(argv[3]));
 	if (argc != 4)
 	{
-		printf("Error\n");
+		printf("%s\n", "Error");
 		exit(98);
 	}
-	if ((argv[2][1] != 0) || ((argv[2][0] != '+') &&  (argv[2][0] != '-')
-		&& (argv[2][0] != '*') && (argv[2][0] != '/') && (argv[2][0] != '%')))
+
+	n1 = atoi(argv[1]);
+	op = argv[2];
+	n2 = atoi(argv[3]);
+
+	if (op[1] != '\0' || get_op_func(op) == NULL)
 	{
-		printf("Error\n");
+		printf("%s\n", "Error");
 		exit(99);
 	}
-	if ((argv[2][0] == '/' || (argv[2][0] == '%')) && atoi(argv[3]) == 0)
+	if ((*op == '/' && n2 == 0) || (*op == '%' && n2 == 0))
 	{
-		printf("Error\n");
+		printf("%s\n", "Error");
 		exit(100);
 	}
-	printf("%d\n", finalRes);
+	printf("%d\n", get_op_func(op)(n1, n2));
 	return (0);
 }
