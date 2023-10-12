@@ -32,5 +32,5 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 	printf("%d\n", finalRes);
-	return 0;
+	return (0);
 }
