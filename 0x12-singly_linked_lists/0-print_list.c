@@ -3,10 +3,9 @@
 #include <stdlib.h>
 
 /**
- * add_node - add node between Nodes
- * @head:LinkedList
- * @str:string
- * Return:the address of the new element, or NULL if it failed
+ * print_list -  function that prints all the elements of a list_t list.
+ * @h: LinkedList
+ * Return: the number of nodes
  */
 size_t print_list(const list_t *h)
 {
