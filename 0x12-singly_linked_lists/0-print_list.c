@@ -1,24 +1,30 @@
 #include "lists.h"
 #include <string.h>
+#include <stdlib.h>
 
 /**
- * print_list - print linkedList
- * @h:the List
- * Return:length
+ * add_node - add node between Nodes
+ * @head:LinkedList
+ * @str:string
+ * Return:the address of the new element, or NULL if it failed
  */
 size_t print_list(const list_t *h)
 {
-	const struct list_s *p;
 	size_t len = 0;
 
-	p = h;
-	while (p != NULL)
+	while (h)
 	{
-		if (p->str != NULL)
-			printf("[%d] %s\n", (int)strlen(p->str), p->str);
+		if (h->str == NULL)
+		{
+			printf("[0] (nil)");
+		}
 		else
-			printf("[0] (nil)\n");
-		p = p->next;
+		{
+			printf("[%d]", h->len);
+			printf(" %s", h->str);
+		}
+		printf("\n");
+		h = h->next;
 		len++;
 	}
 	return (len);
