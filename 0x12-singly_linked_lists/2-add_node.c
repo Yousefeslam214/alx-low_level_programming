@@ -3,28 +3,19 @@
 #include <stdlib.h>
 
 /**
- * add_node - add node between Nodes
- * @head:LinkedList
- * @str:string
- * Return:the address of the new element, or NULL if it failed
+ * list_len -  function that returns the number of elements in a
+ * linked list_t list.
+ * @h: LinkedList
+ * Return: the number of nodes
  */
-list_t *add_node(list_t **head, const char *str)
+size_t list_len(const list_t *h)
 {
-	list_t *newNode = malloc(sizeof(list_t));
+	size_t len = 0;
 
-	if (!newNode || !head)
-		return (NULL);
-	if (str)
+	while (h)
 	{
-		newNode->str = strdup(str);
-		if (!newNode->str)
-		{
-			free(newNode);
-			return (NULL);
-		}
-		newNode->len = strlen(newNode->str);
+		h = h->next;
+		len++;
 	}
-	newNode->next = *head;
-	*head = newNode;
-	return (newNode);
+	return (len);
 }
