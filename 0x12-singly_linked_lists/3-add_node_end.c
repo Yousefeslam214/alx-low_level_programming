@@ -11,32 +11,36 @@
  * or NULL if it failed
  */
 
-/*
-https://www.youtube.com/watch?v=80pnhhHGpWc&
-ab_channel=%D9%85%D8%AD%D9%85%D8%
-AF%D8%A7%D9%84%D8%AF%D8%B3%D9%88%
-D9%82%D9%89
-*/
-
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *newNode = (list_t *)malloc(sizeof(list_t));
-	if (!head || !newNode)
-	{
-		free(newNode);
-		return(NULL);
-	}
+	struct list_s *p = *head;
+	if(!newNode)
+		return (NULL);
 	if(str)
 	{
 		newNode->str = strdup(str);
-		if(!newNode->str)
+		newNode->len = strlen(str);
+		newNode->next = NULL;
+		/*
+		if (!newNode->str)
 		{
 			free(newNode);
 			return(NULL);
+		}*/
+		if(!p)
+		{
+			*head = newNode;
+			return (newNode);
 		}
-		newNode->len = strlen(str);
+		else
+		{
+			while (p->next != NULL)
+				p = p->next;
+			p->next = newNode;
+			return(newNode);
+		}
 	}
-	newNode->next = *head;
-	*head = newNode;
-	return (newNode);
+	free(newNode);
+	return (NULL);
 }

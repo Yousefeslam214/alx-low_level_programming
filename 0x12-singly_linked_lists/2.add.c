@@ -20,12 +20,9 @@ D9%82%D9%89
 
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *newNode = (list_t *)malloc(sizeof(list_t));
+	list_t *newNode = (list_t *)malloc(sizeof(size_t));
 	if (!head || !newNode)
-	{
-		free(newNode);
 		return(NULL);
-	}
 	if(str)
 	{
 		newNode->str = strdup(str);

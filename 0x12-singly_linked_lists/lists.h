@@ -12,11 +12,31 @@
  *
  * Description: singly linked list node structure
  */
+
+
+/*
+	list_t *newNode = (list_t *)malloc(sizeof(list_t));
+	if(!head || !newNode)
+		return (NULL);
+	if(str)
+	{
+		newNode->str = strdup(str);
+		if (!newNode->str)
+		{
+			free(newNode);
+			return(NULL);
+		}
+		newNode->len = strlen(str);
+	}
+	newNode->next = *head;
+	*head = newNode;
+	return (newNode); 
+*/
 typedef struct list_s
 {
-	char *str;
-	unsigned int len;
-	struct list_s *next;
+    char *str;
+    unsigned int len;
+    struct list_s *next;
 } list_t;
 
 size_t print_list(const list_t *h);
