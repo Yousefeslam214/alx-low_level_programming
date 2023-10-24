@@ -11,13 +11,6 @@
  * or NULL if it failed
  */
 
-/*
-https://www.youtube.com/watch?v=80pnhhHGpWc&
-ab_channel=%D9%85%D8%AD%D9%85%D8%
-AF%D8%A7%D9%84%D8%AF%D8%B3%D9%88%
-D9%82%D9%89
-*/
-
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *newNode = (list_t *)malloc(sizeof(list_t));
