@@ -15,31 +15,32 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *newNode = (list_t *)malloc(sizeof(list_t));
 	struct list_s *temp = *head;
-	if(!newNode)
+
+	if (!newNode)
 		return (NULL);
-	if(str)
+	if (str)
 	{
 		newNode->str = strdup(str);
 		newNode->len = strlen(str);
 		newNode->next = NULL;
-		if(!newNode->str)
+		if (!newNode->str)
 		{
 			free(newNode);
-			return(NULL);
+			return (NULL);
 		}
-		if(!temp)
+		if (!temp)
 		{
 			*head = newNode;
-			return(newNode);
+			return (newNode);
 		}
 		else
 		{
 			while (temp->next != NULL)
 				temp = temp->next;
 			temp->next = newNode;
-			return(newNode);
+			return (newNode);
 		}
 	}
 	free(newNode);
-	return(NULL);
+	return (NULL);
 }
