@@ -2,7 +2,7 @@
 #include <string.h>
 
 /**
- * print_list - print linkedList
+ * print_listint - print linkedList
  * @h:the List
  * Return:length
  */
