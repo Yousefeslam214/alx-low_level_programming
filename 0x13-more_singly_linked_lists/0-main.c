@@ -16,7 +16,7 @@ int main(void)
     size_t n;
 
     head = &hello;
-    new = malloc(sizeof(listint_t));
+    new = (listint_t *)malloc(sizeof(listint_t));
     if (new == NULL)
     {
         printf("Error\n");
@@ -30,3 +30,4 @@ int main(void)
     free(new);
     return (0);
 }
+
