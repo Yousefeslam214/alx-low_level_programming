@@ -3,12 +3,8 @@
 #include <stdlib.h>
 
 /**
- * list_len -  function that adds a new node at
- * the beginning of a list_t list.
- * @head: LinkedList
- * @str: string
- * Return: the address of the new element,
- * or NULL if it failed
+ * free_list - delete the list fron the heap
+ * @head: head of the list
  */
 
 void free_list(list_t *head)
