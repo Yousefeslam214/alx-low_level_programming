@@ -2,10 +2,9 @@
 #include <string.h>
 
 /**
- * add_nodeint_end - add node to end of linkedList
+ * free_listint - free list
  * @head:the List
- * @n:int
- * Return:new node address
+ * Return:nothing
  */
 
 void free_listint(listint_t *head)
