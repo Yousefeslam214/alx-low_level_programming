@@ -3,12 +3,10 @@
 #include <stdlib.h>
 
 /**
- * list_len -  function that adds a new node at
- * the beginning of a list_t list.
- * @head: LinkedList
- * @str: string
- * Return: the address of the new element,
- * or NULL if it failed
+ * add_node - add node between Nodes
+ * @head:LinkedList
+ * @str:string
+ * Return:the address of the new element, or NULL if it failed
  */
 
 list_t *add_node(list_t **head, const char *str)
