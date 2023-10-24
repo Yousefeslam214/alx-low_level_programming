@@ -7,23 +7,24 @@
  * @h: LinkedList
  * Return: the number of nodes
  */
+
 size_t print_list(const list_t *h)
 {
+	const list_t *temp ;
 	size_t len = 0;
 
-	while (h)
+	temp = h;
+	while (temp)
 	{
-		if (h->str == NULL)
+		if (temp->str == NULL)
 		{
-			printf("[0] (nil)");
+			printf("[0] (nil)\n");
 		}
 		else
 		{
-			printf("[%d]", h->len);
-			printf(" %s", h->str);
+			printf("[%d] %s\n", (int)strlen(temp->str), temp->str);
 		}
-		printf("\n");
-		h = h->next;
+		temp = temp->next;
 		len++;
 	}
 	return (len);
