@@ -30,7 +30,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 			free(current);
 			return (1);
 		}
-		if (!temp || !(!temp->next))
+		if (!temp || !(temp->next))
 			return (-1);
 		temp = temp->next;
 	}
