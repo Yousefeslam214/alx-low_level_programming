@@ -41,10 +41,11 @@ int check_string(const char *str)
  * @b: string contains 0's and 1's
  * Return: unsigned int of binary
 */
- unsigned int binary_to_uint(const char *b)
+unsigned int binary_to_uint(const char *b)
 {
 	int digit, index, total = 1, sum = 0, po;
-	if ((check_string(b)) == 0)
+
+	if ( (check_string(b)) == 0)
 	{
 		return(0);
 	}
@@ -55,9 +56,9 @@ int check_string(const char *str)
 	{
 		index = digit % 10;
 		digit /= 10;
-		po = (_pow((2),(total)));
+		po = (_pow((2), (total)));
 		sum += (index * po);
 		total++;
 	}
-	return((unsigned int)sum);
+	return ((unsigned int)sum);
 }
