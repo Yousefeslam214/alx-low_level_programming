@@ -45,12 +45,12 @@ unsigned int binary_to_uint(const char *b)
 {
 	int digit, index, total = 1, sum = 0, po;
 
+	if (!b)
+		return (0);
 	if ((check_string(b)) == 0)
 	{
 		return (0);
 	}
-	if (!b)
-		return (0);
 	digit = (atoi)(b);
 	while (digit)
 	{
