@@ -24,15 +24,16 @@ int _pow(int x, int y)
  * @str: A pointer to the string to be checked.
  * Return: 1 if the string contains only 0 and 1, 0 otherwise.
  */
-int check_string(const char *str) {
+int check_string(const char *str)
+{
 	int i;
-	for (i = 0; str[i] != '\0'; i++) {
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
 		if (str[i] != '0' && str[i] != '1')
-			return(0);
-		else
-			continue;
+			return (0);
 	}
-	return 1;
+	return (1);
 }
 
 /**
@@ -42,7 +43,7 @@ int check_string(const char *str) {
 */
  unsigned int binary_to_uint(const char *b)
 {
-	int digit, index, total = 1 , sum = 0, po;
+	int digit, index, total = 1, sum = 0, po;
 	if ((check_string(b)) == 0)
 	{
 		return(0);
