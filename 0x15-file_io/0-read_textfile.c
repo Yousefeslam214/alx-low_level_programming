@@ -1,29 +1,41 @@
-/*
- * 0x15. C - File I/O
- * task 0
- */
+#include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
+
 /**
- * read_textfile - eads a text file and prints it to the POSIX standard output.
- * @filename: filename
- * @letters: number of letters it should read and print
- * Return: number, or 0.
+ * read_textfile - that reads a text file and prints
+ * @filename: variable pointer
+ * @letters: size letters
+ * Description: Write a function that reads a text file and prints it
+ * to the POSIX standard output.
+ * Return: the actual number of letters it could read and print, 0 otherwise
  */
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int file_descriptor;
-	char *buf;
+	ssize_t file, let, w;
+	char *text;
+
+	text = malloc(letters);
+	if (text == NULL)
+		return (0);
 
 	if (filename == NULL)
 		return (0);
-	file_descriptor = open(filename, O_RDONLY);
-	if (file_descriptor == -1)
+
+	file = open(filename, O_RDONLY);
+
+	if (file == -1)
+	{
+		free(text);
 		return (0);
-	buf = malloc(sizeof(char) * letters);
-	letters = read(file_descriptor, buf, letters);
-	if ((size_t) write(STDOUT_FILENO, buf, letters) != letters)
-		return (0);
-	close(file_descriptor);
-	free(buf);
-	return (letters);
+	}
+
+	let = read(file, text, letters);
+
+	w = write(STDOUT_FILENO, text, let);
+
+	close(file);
+
+	return (w);
 }
