@@ -2,7 +2,8 @@
 
 #define BUFSIZE 1024
 int _close(int fd);
-
+void errorMsgRead();
+void errorMsgWrite();
 /**
  * main - takes 2 files, copy 1st one to 2nd one
  * @argc: number of inputs
@@ -22,37 +23,29 @@ int main(int argc, char *argv[])
 	}
 	fd_from = open(argv[1], O_RDONLY);
 	if (fd_from == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
+		errorMsgRead();
 	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd_to == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[2]);
-		exit(99);
-	}
+		errorMsgWrite();
 	while ((n_read = read(fd_from, buf, BUFSIZE)))
 	{
-		if (n_read == -1)
+		if(n_read == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[1]);
 			_close(fd_from);
 			_close(fd_to);
-			exit(98);
+			errorMsgRead();
 		}
 		n_write = write(fd_to, buf, n_read);
-		if (n_write == -1)
+		if(n_write == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			_close(fd_from);
 			_close(fd_to);
-			exit(99);
+			errorMsgWrite();
 		}
 	}
-	if (_close(fd_from) == -1 || _close(fd_to) == -1)
-		exit(100);
-	return (0);
+	_close(fd_from);
+  	_close(fd_to);
+	return(0);
 }
 /**
  * _close - close the file
@@ -65,4 +58,14 @@ int _close(int fd)
 		return (0);
 	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 	return (-1);
+}
+void errorMsgRead()
+{
+	dprintf(STDERR_FILENO, "Error: Can't read from file NAME_OF_THE_FILE\n");
+	return(exit(98));
+}
+void errorMsgWrite()
+{
+	dprintf(STDERR_FILENO, "Error: Can't write to NAME_OF_THE_FILE\n");
+	return(exit(99));
 }
