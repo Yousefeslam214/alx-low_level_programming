@@ -1,9 +1,9 @@
 #include "lists.h"
 
 /**
- * add_dnodeint - add node at beginning
+ * add_dnodeint_end - add node at end
  * @head: list
- * @n:number that add in list
+ * @n:the number that add in the list
  * Return: the address of the new element, or NULL if it failed
  */
 
