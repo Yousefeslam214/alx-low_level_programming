@@ -5,8 +5,6 @@
 #include <string.h>
 #include <stdio.h>
 
-#define MAX_NAME 256
-#define TABLE_SIZE 10
 
 /**
  * struct hash_node_s - Node of a hash table
