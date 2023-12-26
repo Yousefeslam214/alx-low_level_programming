@@ -20,12 +20,20 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
     }
     else
     {
-        ht->array[0] = node;
-        return 0;
+        hash_node_t *ptr = ht->array[index];
+
+        while (ptr)
+        {
+            if(strcmp(ptr->key, key) == 0)
+            {
+                free(node->value);
+                ptr->value = strdup(value);
+                return (1);
+            }
+            ptr = ptr->next;
+        }
+        node->next = ht->array[index];
+        ht->array[index] = node;
+        return (1);
     }
-    return 0;
-
-
-
-
 }
