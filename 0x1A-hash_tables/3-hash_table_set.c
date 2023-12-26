@@ -20,12 +20,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		free(node);
 		return (0);
 	}
-	node->key = (char *)key;
-	node->value = (char *)value;
+	node->key = strdup(key);
+	node->value = strdup(value);
 	index = key_index((const unsigned char *)key, ht->size);
 	if (!ht->array[index])
 	{
 		ht->array[index] = node;
+		free(node->key);
+		free(node->value);
+		free(node);
 		return 1;
 	}
 	else
@@ -37,13 +40,22 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			if (strcmp(ptr->key,key) == 0)
 			{
 				free(node->value);
-				node->value = (char *)value;
+				node->value = strdup(value);
+				free(node->key);
+				free(node->value);
+				free(node);
 				return (1);
 			}
 			ptr = ptr->next;
 		}
 		node->next = ht->array[index];
 		ht->array[index] = node;
+
+
+		free(node->key);
+		free(node->value);
+		free(node);
 		return (1);
 	}
+	
 }
