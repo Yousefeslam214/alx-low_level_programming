@@ -12,11 +12,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *node;
 	unsigned long int index;
 
-	if (!ht || !key || !value)
+	if (!key || !value || !ht || *key == '\0')
 		return (0);
 	node = malloc(sizeof(hash_node_t));
 	if (!node)
+	{
+		free(node);
 		return (0);
+	}
 	node->key = (char *)key;
 	node->value = (char *)value;
 	index = key_index((const unsigned char *)key, ht->size);
